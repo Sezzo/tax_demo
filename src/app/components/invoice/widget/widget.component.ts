@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-widget',
+  selector: 'app-invoice-widget',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './widget.component.html',

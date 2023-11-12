@@ -1,3 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <ul class="left-side">
+      <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+      <li><a routerLink="/invoice" routerLinkActive="active">Invoice</a></li>
+    </ul>
+    <div class="right-side">
+      <app-invoice-widget></app-invoice-widget>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
 
 
-<router-outlet></router-outlet>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

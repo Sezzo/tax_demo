@@ -1,0 +1,16 @@
+:host {
+  .content {
+    padding: 25px 75px;
+  }
+
+  mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .left-side {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
