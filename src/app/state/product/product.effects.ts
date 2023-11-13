@@ -12,7 +12,7 @@ export class ProductEffects {
       ofType(loadProducts),
       exhaustMap(() => this.productService.getProducts()
         .pipe(
-          map(products => ({type: '[Products] Products loaded success', products: products})),
+          map(products => ({type: '[Products] Products loaded success', products})),
           catchError(() => of(loadProductsError))
         )
       )

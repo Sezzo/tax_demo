@@ -1,4 +1,4 @@
-import { ProductState} from "../../models/product.model";
+import {ProductState} from "../../models/product.model";
 import {createReducer, on} from "@ngrx/store";
 import {loadProductsSuccessful} from "./product.action";
 

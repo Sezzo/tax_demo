@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component} from '@angular/core';
+import {CommonModule, registerLocaleData} from '@angular/common';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {WidgetComponent} from "./components/invoice/widget/widget.component";
+import localeDe from '@angular/common/locales/de';
+
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,8 @@ import {WidgetComponent} from "./components/invoice/widget/widget.component";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Invoice Maker';
+export class AppComponent{
+  constructor() {
+    registerLocaleData(localeDe)
+  }
 }

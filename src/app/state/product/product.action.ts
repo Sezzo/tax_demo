@@ -1,5 +1,5 @@
 import {createAction, props} from "@ngrx/store";
-import {ProductState} from "../../models/product.model";
+import {ProductModel} from "../../models/product.model";
 
 
 export const loadProducts = createAction(
@@ -8,7 +8,7 @@ export const loadProducts = createAction(
 
 export const loadProductsSuccessful = createAction(
   '[Products] Products loaded success',
-  props<ProductState>()
+  props<{products: ProductModel[]}>()
 )
 
 export const loadProductsError = createAction('[Products] Products loading error')
