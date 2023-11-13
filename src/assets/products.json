@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Die Reise des Unbekannten",
+    "price": 12.49,
+    "category": {
+      "name": "book",
+      "tax": 0.00
+    },
+    "imported": false
+  },
+  {
+    "id": 2,
+    "name": "Die Flippers",
+    "price": 14.99,
+    "category": {
+      "name": "audio",
+      "tax": 0.10
+    },
+    "imported": false
+  },
+  {
+    "id": 3,
+    "name": "Ritter Sport",
+    "price": 0.85,
+    "category": {
+      "name": "food",
+      "tax": 0.00
+    },
+    "imported": false
+  },
+  {
+    "id": 4,
+    "name": "Toblerone",
+    "price": 10.00,
+    "category":  {
+      "name": "food",
+      "tax": 0.00
+    },
+    "imported": true
+  },
+  {
+    "id": 5,
+    "name": "Armani Parfume",
+    "price": 47.50,
+    "category":  {
+      "name": "perfume",
+      "tax": 0.10
+    },
+    "imported": true
+  },
+  {
+    "id": 6,
+    "name": "Hugo Boss Parfume",
+    "price": 27.99,
+    "category":  {
+      "name": "perfume",
+      "tax": 0.10
+    },
+    "imported": true
+  },
+  {
+    "id": 7,
+    "name": "Der gute Duft",
+    "price": 18.99,
+    "category":  {
+      "name": "perfume",
+      "tax": 0.10
+    },
+    "imported": false
+  },
+  {
+    "id": 8,
+    "name": "Asperin",
+    "price": 9.75,
+    "category":{
+    "name": "medical",
+    "tax": 0.00
+  },
+    "imported": false
+  },
+  {
+    "id": 9,
+    "name": "Finest british chocolate",
+    "price": 11.25,
+    "category":  {
+      "name": "food",
+      "tax": 0.00
+    },
+    "imported": true
+  }
+]
