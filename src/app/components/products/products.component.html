@@ -1,1 +1,36 @@
-<p>products works!</p>
+
+
+<mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let element"> test{{element.name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="category">
+    <mat-header-cell *matHeaderCellDef>Category</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.category.name}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="price">
+    <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="imported">
+    <mat-header-cell *matHeaderCellDef>Imported</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="tax">
+    <mat-header-cell *matHeaderCellDef>Basic Tax</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="action">
+    <mat-header-cell *matHeaderCellDef aria-label="row actions"></mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <mat-icon>more_vert</mat-icon>
+    </mat-cell>
+  </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="tableHeaders"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: tableHeaders;"></mat-row>
+</mat-table>
+
+
