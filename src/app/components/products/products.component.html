@@ -23,8 +23,8 @@
   <ng-container matColumnDef="action">
     <mat-header-cell *matHeaderCellDef aria-label="row actions"></mat-header-cell>
     <mat-cell *matCellDef="let element">
-      <button mat-mini-fab color="primary">
-        <mat-icon (click)="addToInvoice(element)">add_shopping_cart</mat-icon>
+      <button mat-mini-fab color="primary" (click)="addToInvoice(element)">
+        <mat-icon >add</mat-icon>
       </button>
     </mat-cell>
   </ng-container>

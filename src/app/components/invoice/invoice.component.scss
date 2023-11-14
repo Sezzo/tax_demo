@@ -1,0 +1,27 @@
+:host {
+
+  .form {
+    min-width: 150px;
+    width: 100%;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .pdf-create {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .footer-row {
+    display: flex;
+    font-weight: bold;
+  }
+
+  .footer-cell {
+    display: flex;
+    justify-content: space-between;
+  }
+}

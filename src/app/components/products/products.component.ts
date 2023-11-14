@@ -8,6 +8,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
 import {AppState} from "../../models/state.model";
 import {MatButtonModule} from "@angular/material/button";
+import {addProductToInvoice} from "../../state/invoice/invoice.action";
 
 export interface PeriodicElement {
   name: string;
@@ -41,6 +42,7 @@ export class ProductsComponent {
   }
 
   addToInvoice(product: ProductModel) {
-
+    console.log("add", product)
+    this.store.dispatch(addProductToInvoice({product, amount: 1}));
   }
 }
