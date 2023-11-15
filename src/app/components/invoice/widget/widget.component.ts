@@ -7,7 +7,7 @@ import {getProductCount} from "../../../state/invoice/invoice.selector";
 @Component({
   selector: 'app-invoice-widget',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss']
 })

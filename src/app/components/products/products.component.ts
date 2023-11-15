@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgIf} from '@angular/common';
 import {Store} from "@ngrx/store";
 import {ProductModel} from "../../models/product.model";
 import {loadProducts} from "../../state/product/product.action";
@@ -9,6 +9,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {AppState} from "../../models/state.model";
 import {MatButtonModule} from "@angular/material/button";
 import {addProductToInvoice} from "../../state/invoice/invoice.action";
+import { NoopAnimationsModule} from "@angular/platform-browser/animations";
 
 export interface PeriodicElement {
   name: string;
@@ -20,7 +21,7 @@ export interface PeriodicElement {
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatIconModule, MatButtonModule],
+  imports: [NoopAnimationsModule, MatTableModule, MatIconModule, MatButtonModule ],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })

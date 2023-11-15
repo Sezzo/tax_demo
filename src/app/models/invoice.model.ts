@@ -8,7 +8,7 @@ export interface InvoiceModel {
 export interface InvoiceArticle {
   product: ProductModel;
   amount: number;
-  grossPrice?: number;
+  totalTax?: number;
 }
 
 export interface InvoiceState {

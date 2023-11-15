@@ -72,10 +72,13 @@
       <mat-header-cell *matHeaderCellDef>Import Tax</mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.product.imported ? 5 : 0 }}%</mat-cell>
     </ng-container>
-
+    <ng-container matColumnDef="tax">
+      <mat-header-cell *matHeaderCellDef>Tax</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.totalTax | currency:'EUR':'symbol':'0.2':'de'}}</mat-cell>
+    </ng-container>
     <ng-container matColumnDef="grossPrice">
       <mat-header-cell *matHeaderCellDef>Gross Price</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.grossPrice | currency:'EUR':'symbol':'0.2':'de'}}</mat-cell>
+      <mat-cell *matCellDef="let element"> {{(element.product.price * element.amount) + element.totalTax | currency:'EUR':'symbol':'0.2':'de'}}</mat-cell>
     </ng-container>
 
 
@@ -83,7 +86,7 @@
 
       <mat-footer-cell *matFooterCellDef class="footer-cell">
         <span>Sales Tax:</span>
-        <span>5</span>
+        <span>{{totalTax() | currency:'EUR':'symbol':'0.2':'de'}}</span>
 
       </mat-footer-cell>
 
@@ -93,7 +96,7 @@
 
       <mat-footer-cell *matFooterCellDef class="footer-cell">
         <span>Total:</span>
-        <span>5</span>
+        <span>{{totalPrice() | currency:'EUR':'symbol':'0.2':'de'}}</span>
 
       </mat-footer-cell>
 
@@ -126,7 +129,7 @@
 
 
   <div class="pdf-create" >
-    <button mat-raised-button color="primary" [disabled]="!formGroup.valid && (products$ | async).length === 0" (click)="generatePdf()">
+    <button mat-raised-button color="primary" [disabled]="!formGroup.valid" (click)="generatePdf()">
       Generate Invoice
     </button>
   </div>

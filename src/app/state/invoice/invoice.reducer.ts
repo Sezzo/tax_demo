@@ -24,11 +24,10 @@ export const invoiceReducer = createReducer(
       return ({products: state.products.map(p => p.product.id === product.id ? {
         product,
         amount: p.amount + 1,
-        grossPrice: calculateGrossPrice(product, p.amount + 1)
+          totalTax: calculateTotalTax(product, p.amount + 1),
       } : p)})
     } else {
-      calculateGrossPrice(product)
-      return ({products: [...state.products, {product, amount, grossPrice: calculateGrossPrice(product) }]})
+      return ({products: [...state.products, {product, amount, totalTax: calculateTotalTax(product) }]})
     }
   }),
 
@@ -47,7 +46,7 @@ export const invoiceReducer = createReducer(
 );
 
 
-function calculateGrossPrice(product: ProductModel, quantity = 1) {
+function calculateTotalTax(product: ProductModel, quantity = 1) {
   const price = product.price;
   const basicTax = product.category.tax;
   const importTax = product.imported ? TaxEnum.IMPORT : TaxEnum.NONE;
@@ -57,7 +56,6 @@ function calculateGrossPrice(product: ProductModel, quantity = 1) {
 
   // Round taxes to the nearest 0.05
   tax = Math.ceil(tax * 20) / 20;
-
-  // Calculate gross price
-  return (price + tax) * quantity;
+  // Calculate tax for the quantity
+  return tax * quantity;
 }
