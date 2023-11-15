@@ -12,5 +12,6 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import {invoiceReducer} from "./state/invoice/invoice.reducer";
 
 export const appConfig: ApplicationConfig = {
+
   providers: [provideRouter(routes), provideAnimations(), provideHttpClient(), provideStore({productState: productReducer, invoiceState: invoiceReducer}), provideEffects(ProductEffects), provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })]
 };

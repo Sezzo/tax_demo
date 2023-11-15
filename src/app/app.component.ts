@@ -11,11 +11,13 @@ import localeDe from '@angular/common/locales/de';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatToolbarModule, MatIconModule, MatButtonModule, WidgetComponent, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, MatToolbarModule, MatIconModule, MatButtonModule, WidgetComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent{
+  title = 'tax';
+
   constructor() {
     registerLocaleData(localeDe)
   }
